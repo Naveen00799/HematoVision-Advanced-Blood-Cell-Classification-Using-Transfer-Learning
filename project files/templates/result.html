@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result - HematoVision</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Large Project Title Banner */
+        .project-title {
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 40px 20px;   /* Increased height */
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        /* Result Card */
+        .outer-container {
+            width: 800px;
+            margin: 10px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .content {
+            padding: 15px 30px 10px 30px;
+        }
+
+        .predicted {
+            font-weight: bold;
+            font-size: 22px;
+            color: #e74c3c;
+        }
+
+        img {
+            width: 320px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+        }
+
+        .bottom-bar {
+            background-color: #eee;
+            height: 50px;
+            margin-top: 30px;
+            border-radius: 0 0 10px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="project-title">
+        HematoVision: Advanced Blood Cell Classification Using Transfer Learning
+    </div>
+
+    <div class="outer-container">
+
+        <div class="header">
+            Prediction Result
+        </div>
+
+        <div class="content">
+            <p>
+                Predicted Class:
+                <span class="predicted">{{ class_label }}</span>
+            </p>
+
+            <img src="data:image/png;base64,{{ img_data }}" alt="Uploaded Image">
+
+            <br>
+
+            <form action="/">
+                <button type="submit" class="btn">Upload Another Image</button>
+            </form>
+        </div>
+
+    
+
+    </div>
+
+</body>
+</html>
